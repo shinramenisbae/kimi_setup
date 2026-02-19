@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "profiles": {
+    "anthropic:manual": {
+      "type": "token",
+      "provider": "anthropic",
+      "token": "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"
+    }
+  },
+  "lastGood": {
+    "anthropic": "anthropic:manual"
+  },
+  "usageStats": {
+    "anthropic:manual": {
+      "lastUsed": 1771531610028,
+      "errorCount": 4,
+      "lastFailureAt": 1771536702328,
+      "failureCounts": {
+        "rate_limit": 4
+      },
+      "cooldownUntil": 1771540302328
+    }
+  }
+}

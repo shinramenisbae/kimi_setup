@@ -1,0 +1,61 @@
+{
+  "60271bd739d9fa7c5f024d39c352cfd38d54e802b5003c002c691ab71035862e": {
+    "deviceId": "60271bd739d9fa7c5f024d39c352cfd38d54e802b5003c002c691ab71035862e",
+    "publicKey": "Cxiu2Qo5deu1k_z-ZLYnozPkvuII3yPTTJjegO5CCdg",
+    "platform": "linux",
+    "clientId": "gateway-client",
+    "clientMode": "backend",
+    "role": "operator",
+    "roles": [
+      "operator"
+    ],
+    "scopes": [
+      "operator.admin",
+      "operator.approvals",
+      "operator.pairing"
+    ],
+    "tokens": {
+      "operator": {
+        "token": "c5e73dfcaa9d421dab3a30d80b8413fc",
+        "role": "operator",
+        "scopes": [
+          "operator.admin",
+          "operator.approvals",
+          "operator.pairing"
+        ],
+        "createdAtMs": 1770520030144,
+        "lastUsedAtMs": 1771498055265
+      }
+    },
+    "createdAtMs": 1770520030144,
+    "approvedAtMs": 1770520030144,
+    "displayName": "agent"
+  },
+  "292d597c1b17db1fdf225578f10dc5042a5b3c103a728f53d06206c8de9e5ef0": {
+    "deviceId": "292d597c1b17db1fdf225578f10dc5042a5b3c103a728f53d06206c8de9e5ef0",
+    "publicKey": "u_tlqHB_P4BmqWtgft3iYv1-nbtxpA4y_23RYMw1BTA",
+    "displayName": "kimi-bridge-connector",
+    "platform": "linux",
+    "clientId": "gateway-client",
+    "clientMode": "backend",
+    "role": "operator",
+    "roles": [
+      "operator"
+    ],
+    "scopes": [
+      "operator.admin"
+    ],
+    "tokens": {
+      "operator": {
+        "token": "zE9Z_cSxezWbU53qowBFH_aUZsLp6gy_tPRWxz_v6ZM",
+        "role": "operator",
+        "scopes": [
+          "operator.admin"
+        ],
+        "createdAtMs": 1771535714324
+      }
+    },
+    "createdAtMs": 1771535714324,
+    "approvedAtMs": 1771535714324
+  }
+}

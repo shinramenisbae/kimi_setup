@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "jobs": [
+    {
+      "id": "f97379af-c999-49f0-aa72-fa9fae48af3d",
+      "name": "email-summary",
+      "enabled": true,
+      "createdAtMs": 1770523032666,
+      "updatedAtMs": 1771527648976,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 8 * * *",
+        "tz": "Pacific/Auckland"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Summarize my unread emails. Use gog gmail search 'is:unread' to fetch them, then gog gmail read <id> for important ones. Give me a concise summary grouped by category (important/action needed, updates, promotions). Skip obvious spam/promotions unless something looks interesting.",
+        "timeoutSeconds": 120
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "last"
+      },
+      "state": {
+        "nextRunAtMs": 1771614000000,
+        "lastRunAtMs": 1771527600005,
+        "lastStatus": "ok",
+        "lastDurationMs": 48971,
+        "consecutiveErrors": 0
+      }
+    },
+    {
+      "id": "ccce6dea-8cf8-44bd-94c6-71853c51889b",
+      "agentId": "main",
+      "name": "AKL→MEL flight price watch",
+      "enabled": true,
+      "createdAtMs": 1770541414939,
+      "updatedAtMs": 1771535048227,
+      "schedule": {
+        "kind": "every",
+        "everyMs": 21600000,
+        "anchorMs": 1770541414939
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Check flight prices from Auckland (AKL) to Melbourne (MEL), departing April 9 2026 and returning April 12 2026. Fetch this URL: https://www.google.com/travel/flights?q=flights%20from%20AKL%20to%20MEL%20on%202026-04-09%20return%202026-04-12&curr=NZD\n\nLook for any round trip price below NZ$630. If you find one, send a message to Discord channel 1469879767544103065 alerting Stephen with the airline, times, and price. If no flights are below $630, do nothing — no message needed.",
+        "model": "anthropic/claude-sonnet-4-20250514",
+        "timeoutSeconds": 120
+      },
+      "delivery": {
+        "mode": "none"
+      },
+      "state": {
+        "nextRunAtMs": 1771556614939,
+        "lastRunAtMs": 1771535014946,
+        "lastStatus": "ok",
+        "lastDurationMs": 33281,
+        "consecutiveErrors": 0
+      }
+    }
+  ]
+}

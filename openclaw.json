@@ -1,0 +1,170 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.2.17",
+    "lastTouchedAt": "2026-02-19T21:15:15.730Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-02-08T02:22:29.639Z",
+    "lastRunVersion": "2026.2.6-3",
+    "lastRunCommand": "doctor",
+    "lastRunMode": "local"
+  },
+  "browser": {
+    "enabled": true,
+    "executablePath": "/usr/bin/google-chrome-stable",
+    "headless": false,
+    "noSandbox": true,
+    "attachOnly": true,
+    "defaultProfile": "openclaw"
+  },
+  "auth": {
+    "profiles": {
+      "anthropic:manual": {
+        "provider": "anthropic",
+        "mode": "token"
+      },
+      "gemini:manual": {
+        "provider": "gemini",
+        "mode": "token"
+      }
+    }
+  },
+  "models": {
+    "providers": {
+      "kimi-code": {
+        "baseUrl": "https://api.kimi.com/coding/v1",
+        "apiKey": "sk-kimi-uoz0bcUCVVVbhljKFcWytqX3lKyeWTlQWFPBpGbx1ZT35B1ne7GiOAjCGfEBwUGB",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "kimi-for-coding",
+            "name": "Kimi for Coding",
+            "reasoning": true,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 262144,
+            "maxTokens": 16384
+          }
+        ]
+      },
+      "moonshot": {
+        "baseUrl": "https://api.moonshot.cn/v1",
+        "apiKey": "sk-u4yL722Yf6rkCrMBbaIEKoo4ahwxtlSJ4wSvltCxTo9uoqCZ",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "kimi-k2.5",
+            "name": "Kimi K2.5",
+            "reasoning": false,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 131072,
+            "maxTokens": 16384
+          },
+          {
+            "id": "kimi-k2-thinking-turbo",
+            "name": "Kimi K2 Thinking Turbo",
+            "reasoning": true,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 131072,
+            "maxTokens": 16384
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "anthropic/claude-opus-4-6",
+        "fallbacks": []
+      },
+      "contextPruning": {
+        "mode": "cache-ttl",
+        "ttl": "1h"
+      },
+      "compaction": {
+        "mode": "safeguard"
+      },
+      "heartbeat": {
+        "every": "1h"
+      },
+      "maxConcurrent": 4,
+      "subagents": {
+        "maxConcurrent": 8
+      }
+    }
+  },
+  "tools": {
+    "elevated": {
+      "enabled": true
+    }
+  },
+  "messages": {
+    "ackReactionScope": "group-mentions"
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto"
+  },
+  "session": {},
+  "channels": {
+    "discord": {
+      "token": "MTQ2OTg3OTA0MjM4NjY5NDQwMA.GtuMCp.4FrioDs_RjpW19WJk_zAr8f5J7AAgKz5n3yvUk",
+      "groupPolicy": "open",
+      "guilds": {
+        "*": {
+          "requireMention": false,
+          "tools": {
+            "allow": [
+              "*"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "gateway": {
+    "mode": "local",
+    "auth": {
+      "mode": "token",
+      "token": "d3330ca575f306e33ae3ab4906259525aaea5c41406932d9"
+    }
+  },
+  "plugins": {
+    "load": {
+      "paths": []
+    },
+    "entries": {
+      "discord": {
+        "enabled": true
+      }
+    },
+    "installs": {}
+  }
+}
