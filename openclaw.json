@@ -135,7 +135,7 @@
   "session": {},
   "channels": {
     "discord": {
-      "token": "MTQ2OTg3OTA0MjM4NjY5NDQwMA.GtuMCp.4FrioDs_RjpW19WJk_zAr8f5J7AAgKz5n3yvUk",
+      "token": "YOUR_DISCORD_BOT_TOKEN_HERE",
       "groupPolicy": "open",
       "guilds": {
         "*": {
@@ -153,7 +153,7 @@
     "mode": "local",
     "auth": {
       "mode": "token",
-      "token": "d3330ca575f306e33ae3ab4906259525aaea5c41406932d9"
+      "token": "YOUR_GATEWAY_TOKEN_HERE"
     }
   },
   "plugins": {
